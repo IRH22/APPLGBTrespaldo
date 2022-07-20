@@ -52,24 +52,15 @@ export default class StoryCard extends Component {
           })
         }>
           <View style={styles.cardContainer}>
-            <View style={styles.titleContainer}>
-              <Text style={styles.storyAuthorText}>
-                {this.props.story.name}
-              </Text>
-              <Text style={styles.descriptionText}>
-                {this.props.story.definition}
-              </Text>
-              <Image
-              source={require("../assets/story_image_1.png")}
-              style={styles.storyImage}
-            ></Image>
-            </View>
             <View style={styles.actionContainer}>
-              <View style={styles.likeButton}>
-                <Ionicons name={"heart"} size={RFValue(30)} color={"white"} />
-                <Text style={styles.likeText}>12m</Text>
-              </View>
+                <View style={styles.likeButton}>
+                  <Text style={styles.storyAuthorText} numberOfLines={2}>
+                    {this.props.story.name}
+                  </Text>
+                </View>
+            
             </View>
+            
           </View>
        </TouchableOpacity>
       );
@@ -104,9 +95,11 @@ const styles = StyleSheet.create({
     color: "black"
   },
   storyAuthorText: {
-    fontSize: RFValue(18),
+    fontSize: RFValue(29),
     fontFamily: "Bubblegum-Sans",
-    color: "black"
+    color: "black",
+    margin: RFValue(8),
+    alignSelf: "center",
   },
   descriptionText: {
     fontFamily: "Bubblegum-Sans",
@@ -117,7 +110,7 @@ const styles = StyleSheet.create({
   actionContainer: {
     justifyContent: "center",
     alignItems: "center",
-    padding: RFValue(10)
+    padding: RFValue(40)
   },
   likeButton: {
     width: RFValue(160),
