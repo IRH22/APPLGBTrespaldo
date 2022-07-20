@@ -20,7 +20,7 @@ let customFonts = {
   "Bubblegum-Sans": require("../assets/fonts/BubblegumSans-Regular.ttf")
 };
 
-let stories = require("./temp_stories.json");
+let stories = require("./definitions.json");
 
 export default class Feed extends Component {
   constructor(props) {

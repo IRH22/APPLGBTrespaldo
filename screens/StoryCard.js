@@ -54,10 +54,10 @@ export default class StoryCard extends Component {
           <View style={styles.cardContainer}>
             <View style={styles.titleContainer}>
               <Text style={styles.storyAuthorText}>
-                {this.props.story.author}
+                {this.props.story.name}
               </Text>
               <Text style={styles.descriptionText}>
-                {this.props.story.storyImage}
+                {this.props.story.definition}
               </Text>
               <Image
               source={require("../assets/story_image_1.png")}
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   
   cardContainer: {
     margin: RFValue(13),
-    //backgroundColor: "#2f345d",
+    backgroundColor: "#2f345d",
     borderRadius: RFValue(20)
   },
   storyImage: {
@@ -101,17 +101,17 @@ const styles = StyleSheet.create({
   storyTitleText: {
     fontSize: RFValue(25),
     fontFamily: "Bubblegum-Sans",
-    //color: "white"
+    color: "black"
   },
   storyAuthorText: {
     fontSize: RFValue(18),
     fontFamily: "Bubblegum-Sans",
-    //color: "white"
+    color: "black"
   },
   descriptionText: {
     fontFamily: "Bubblegum-Sans",
     fontSize: 13,
-    //color: "white",
+    color: "black",
     paddingTop: RFValue(10)
   },
   actionContainer: {
