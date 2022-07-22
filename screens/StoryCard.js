@@ -100,6 +100,9 @@ const styles = StyleSheet.create({
     color: "black",
     margin: RFValue(8),
     alignSelf: "center",
+    flexWrap: 'wrap',
+    flexDirection: "row",
+    flex: 1
   },
   descriptionText: {
     fontFamily: "Bubblegum-Sans",
@@ -110,7 +113,10 @@ const styles = StyleSheet.create({
   actionContainer: {
     justifyContent: "center",
     alignItems: "center",
-    padding: RFValue(40)
+    padding: RFValue(40),
+    margin: RFValue(30),
+    backgroundColor: "white",
+    borderRadius: RFValue(7)
   },
   likeButton: {
     width: RFValue(160),
